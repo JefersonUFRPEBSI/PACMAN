@@ -1,2 +1,2 @@
-# PACMAN
-DENSEVOLVENDO UM APP PARA UM PROJETO DE FACULDADE
+# GearUP_PacMan
+kivy Pac-Man implementation for python course. 

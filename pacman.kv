@@ -1,0 +1,224 @@
+<Pac>:
+    size: 32, 32
+    canvas:
+        Color:
+            rgb: 255,238,0
+        Ellipse:
+            pos: self.pos
+            size: self.size
+            angle_start: (root.start_angle)
+            angle_end: (root.end_angle)
+<Blinky>:
+    size: 32,32
+    canvas:
+        Color:
+            rgb: self.color[0],self.color[1],self.color[2]
+        Ellipse:
+            pos: self.x, self.y
+            size: 32-1,32
+            angle_start: -90
+            angle_end: 90
+        Quad:
+            points: self.center_x - 16, self.center_y, self.center_x -16 , self.center_y - 5, self.center_x + 15, self.center_y - 5, self.center_x + 15, self.center_y
+        Triangle:
+            points: self.center_x - 16, self.center_y - 14, self.center_x - 16, self.center_y - 4, self.center_x - 6, self.center_y - 4
+        Triangle:
+            points: self.center_x, self.center_y - 14, self.center_x - 10, self.center_y - 4, self.center_x  + 10, self.center_y - 4
+        Triangle:
+            points: self.center_x + 15, self.center_y - 15, self.center_x + 5, self.center_y - 4, self.center_x  + 15, self.center_y - 4
+        Color:
+            rgb: 1,1,1
+        Ellipse:
+            size: 5,10
+            pos: self.center_x - 7, self.center_y
+        Ellipse:
+            size: 5,10
+            pos: self.center_x + 2, self.center_y
+        Color:
+            rgb: 0,0,1
+        Ellipse:
+            size: 2,2
+            pos: self.center_x - 5.5, self.center_y + 3.5
+        Ellipse:
+            size: 2,2
+            pos: self.center_x + 3.5, self.center_y + 3.5
+
+<Pinky>:
+    size: 32,32
+    canvas:
+        Color:
+            rgb: self.color[0], self.color[1], self.color[2]
+        Ellipse:
+            pos: self.x, self.y
+            size: 32-1,32
+            angle_start: -90
+            angle_end: 90
+        Quad:
+            points: self.center_x - 16, self.center_y, self.center_x -16 , self.center_y - 5, self.center_x + 15, self.center_y - 5, self.center_x + 15, self.center_y
+        Triangle:
+            points: self.center_x - 16, self.center_y - 14, self.center_x - 16, self.center_y - 4, self.center_x - 6, self.center_y - 4
+        Triangle:
+            points: self.center_x, self.center_y - 14, self.center_x - 10, self.center_y - 4, self.center_x  + 10, self.center_y - 4
+        Triangle:
+            points: self.center_x + 15, self.center_y - 15, self.center_x + 5, self.center_y - 4, self.center_x  + 15, self.center_y - 4
+        Color:
+            rgb: 1,1,1
+        Ellipse:
+            size: 5,10
+            pos: self.center_x - 7, self.center_y
+        Ellipse:
+            size: 5,10
+            pos: self.center_x + 2, self.center_y
+        Color:
+            rgb: 0,0,1
+        Ellipse:
+            size: 2,2
+            pos: self.center_x - 5.5, self.center_y + 3.5
+        Ellipse:
+            size: 2,2
+            pos: self.center_x + 3.5, self.center_y + 3.5
+
+<Clyde>:
+    size: 32,32
+    canvas:
+        Color:
+            rgb: self.color[0], self.color[1], self.color[2]
+        Ellipse:
+            pos: self.x, self.y
+            size: 32-1,32
+            angle_start: -90
+            angle_end: 90
+        Quad:
+            points: self.center_x - 16, self.center_y, self.center_x -16 , self.center_y - 5, self.center_x + 15, self.center_y - 5, self.center_x + 15, self.center_y
+        Triangle:
+            points: self.center_x - 16, self.center_y - 14, self.center_x - 16, self.center_y - 4, self.center_x - 6, self.center_y - 4
+        Triangle:
+            points: self.center_x, self.center_y - 14, self.center_x - 10, self.center_y - 4, self.center_x  + 10, self.center_y - 4
+        Triangle:
+            points: self.center_x + 15, self.center_y - 15, self.center_x + 5, self.center_y - 4, self.center_x  + 15, self.center_y - 4
+        Color:
+            rgb: 1,1,1
+        Ellipse:
+            size: 5,10
+            pos: self.center_x - 7, self.center_y
+        Ellipse:
+            size: 5,10
+            pos: self.center_x + 2, self.center_y
+        Color:
+            rgb: 0,0,1
+        Ellipse:
+            size: 2,2
+            pos: self.center_x - 5.5, self.center_y + 3.5
+        Ellipse:
+            size: 2,2
+            pos: self.center_x + 3.5, self.center_y + 3.5
+
+<Inky>:
+    size: 32,32
+    canvas:
+        Color:
+            rgb: self.color[0], self.color[1], self.color[2]
+        Ellipse:
+            pos: self.x, self.y
+            size: 32-1,32
+            angle_start: -90
+            angle_end: 90
+        Quad:
+            points: self.center_x - 16, self.center_y, self.center_x -16 , self.center_y - 5, self.center_x + 15, self.center_y - 5, self.center_x + 15, self.center_y
+        Triangle:
+            points: self.center_x - 16, self.center_y - 14, self.center_x - 16, self.center_y - 4, self.center_x - 6, self.center_y - 4
+        Triangle:
+            points: self.center_x, self.center_y - 14, self.center_x - 10, self.center_y - 4, self.center_x  + 10, self.center_y - 4
+        Triangle:
+            points: self.center_x + 15, self.center_y - 15, self.center_x + 5, self.center_y - 4, self.center_x  + 15, self.center_y - 4
+        Color:
+            rgb: 1,1,1
+        Ellipse:
+            size: 5,10
+            pos: self.center_x - 7, self.center_y
+        Ellipse:
+            size: 5,10
+            pos: self.center_x + 2, self.center_y
+        Color:
+            rgb: 0,0,1
+        Ellipse:
+            size: 2,2
+            pos: self.center_x - 5.5, self.center_y + 3.5
+        Ellipse:
+            size: 2,2
+            pos: self.center_x + 3.5, self.center_y + 3.5
+
+
+<PacGame>:
+    pac: pac_id
+    blinky: red_id
+    pinky: pink_id
+    clyde: orange_id
+    inky: blue_id
+    status: status_id
+    status2: status_id2
+
+    canvas:
+        Color:
+            rgb: 0,0,1
+        Rectangle:
+            pos: root.x_marg, root.y_marg
+            size: root.map_l, root.map_h
+        Rectangle:
+            pos: root.x_marg - 2, root.y_marg - 2
+            size: root.map_l + 4, root.map_h + 4
+
+    Label:
+        font_size: 32
+        x: 500
+        top: root.top + root.y_marg
+        text: "Score: " + str(root.score)
+
+    Label:
+        id: status_id
+        font_size: 70
+        color: [1,1,0,1]
+        x: root.map_l / 2
+        top: 540
+        text: ''
+
+    Label:
+        id: status_id2
+        font_size: 20
+        color: [1,1,0,1]
+        x: root.map_l / 2
+        top: 500
+        text: ''
+
+
+    Label:
+        font_size: 32
+        x: 60
+        top: root.top + root.y_marg
+        text: "Lives: " + str(root.lives)
+
+    Pac:
+        id: pac_id
+        x: root.x_marg + (root.tile * 9)
+        y: root.y_marg + (root.tile * 4)
+
+    Blinky:
+        id: red_id
+        x: root.x_marg + (root.tile * 9)
+        y: root.y_marg + (root.tile * 12)
+
+    Pinky:
+        id: pink_id
+        x: root.x_marg + (root.tile * 9)
+        y: root.y_marg + (root.tile * 10)
+
+    Inky:
+        id: blue_id
+        x: root.x_marg + (root.tile * 8)
+        y: root.y_marg + (root.tile * 10)
+
+    Clyde:
+        id: orange_id
+        x: root.x_marg + (root.tile * 10)
+        y: root.y_marg + (root.tile * 10)
+
