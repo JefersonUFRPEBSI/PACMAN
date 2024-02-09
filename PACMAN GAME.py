@@ -8,6 +8,9 @@ from kivy.graphics import Color, Ellipse, Rectangle
 from distutils.command import config
 
 
+Window.fullscreen = True
+
+
 class Pac(Widget):
     speed = 2                           # must be even number
     velocity = Vector(0, 0)
