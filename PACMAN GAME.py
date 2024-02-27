@@ -6,9 +6,11 @@ from kivy.vector import Vector
 from kivy.clock import Clock
 from kivy.graphics import Color, Ellipse, Rectangle
 from distutils.command import config
+from kivy.core.audio import SoundLoader
 
 
 Window.fullscreen = True
+
 
 
 class Pac(Widget):
@@ -951,6 +953,7 @@ class PacGame(Widget):
     def __init__(self, **kwargs):
         # Initialize keyboards, build the level, populate grid then draw ready status.
         super(PacGame, self).__init__(**kwargs)
+
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self)
         self._keyboard.bind(on_key_down=self._on_keyboard_down)
         self.build_level()
@@ -958,7 +961,11 @@ class PacGame(Widget):
         self.redraw(self.status)
         self.redraw()
         self.fill_grid()
-        Window.size = (self.map_l + self.x_marg * 2, self.map_h + self.y_marg * 2)
+        Window.size = (605, 601) #tamanho do jogo
+        self.sound = SoundLoader.load("Pacman.mp3")
+        self.sound.volume = 0.1 #Colocar Volume
+        self.sound.loop = True #põe em loop
+        self.sound.play() # tocar uma música
 
     def _keyboard_closed(self):
         # Unbind keyboard upon closing.
@@ -975,7 +982,7 @@ class PacGame(Widget):
         # Main update loop of program.
         if not self.ready_check:    # If we aren't in ready check continue with normal game loop.
             if self.pac.dead:       # If pac is dead reset ghosts and pac.
-                self.status.text = "VOÇÊ É MUITO RUIM!"
+                self.status.text = "VOCÊ É MUITO RUIM!"
                 self.redraw(self.status)
                 self.death()
             elif not self.pac.dead: # If not dead update positions, clear status then check collisions.
@@ -1105,6 +1112,7 @@ class PacGame(Widget):
                 break
         if self.dots.__len__() < 60:    # If they're close to winning speedup blinky.
             self.blinky.step = 3
+                
 
     def respawn_player(self, restart=False):
         # Respawns the player and ghosts then perfroms ready check.
@@ -1137,7 +1145,7 @@ class PacGame(Widget):
         self._check = True
         self.redraw(self.status)
         self.redraw(self.status2)
-        if self.pac.curr_key == "shift":
+        if self.pac.curr_key == "enter":
             self.pac.dead = False
             self.respawn_player(True)
 
