@@ -5,7 +5,6 @@ from kivy.core.window import Window
 from kivy.vector import Vector
 from kivy.clock import Clock
 from kivy.graphics import Color, Ellipse, Rectangle
-from distutils.command import config
 from kivy.core.audio import SoundLoader
 
 
@@ -951,7 +950,7 @@ class PacGame(Widget):
     v_exclude_dots = []
 
     def __init__(self, **kwargs):
-        # Initialize keyboards, build the level, populate grid then draw ready status.
+        # Inicializar os teclados, construir o nível.
         super(PacGame, self).__init__(**kwargs)
 
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self)
@@ -961,19 +960,19 @@ class PacGame(Widget):
         self.redraw(self.status)
         self.redraw()
         self.fill_grid()
-        Window.size = (605, 601) #tamanho do jogo
+        Window.size = (self.map_l + self.x_marg * 2, self.map_h + self.y_marg * 2) #tamanho do jogo
         self.sound = SoundLoader.load("Pacman.mp3")
         self.sound.volume = 0.1 #Colocar Volume
         self.sound.loop = True #põe em loop
         self.sound.play() # tocar uma música
 
     def _keyboard_closed(self):
-        # Unbind keyboard upon closing.
+        #Desvincule o teclado ao fechar.
         self._keyboard.unbind(on_key_down=self._on_keyboard_down)
         self._keyboard = None
 
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
-        # When a key is pressed we update pac's curr_key.
+        # Quando uma tecla é pressionada, atualizamos curr_key do pac.
         self.pac.curr_key = keycode[1]
         if self.ready_check:        # If we are in ready check take us out when a key is pressed.
             self.ready_check = False
